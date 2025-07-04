@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+
 const Hero = () => {
   return <section className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50/30 flex items-center justify-center px-4 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -86,7 +88,11 @@ const Hero = () => {
               <div className="absolute bottom-8 left-8 w-12 h-12 bg-green-300/20 rounded-full"></div>
               
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
-                <img src="/lovable-uploads/b4b9e609-4461-4a8e-98f6-a8fb2e070494.png" alt="TeamVitalMedia Profile" className="w-full h-full object-cover" />
+                <img 
+                  src="https://ik.imagekit.io/44occvdby4/1.png?updatedAt=1751602546758" 
+                  alt="TeamVitalMedia Profile" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
             </div>
             
@@ -110,4 +116,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
