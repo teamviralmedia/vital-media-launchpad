@@ -3,32 +3,32 @@ const Portfolio = () => {
   const videos = [
     {
       id: 1,
-      embedUrl: "https://www.youtube.com/embed/rGJE79C9pPU",
+      embedUrl: "https://www.youtube.com/embed/rGJE79C9pPU?autoplay=1&mute=1&loop=1&playlist=rGJE79C9pPU",
       title: "Short Video 1"
     },
     {
       id: 2,
-      embedUrl: "https://www.youtube.com/embed/3UZsG7QwHG4",
+      embedUrl: "https://www.youtube.com/embed/3UZsG7QwHG4?autoplay=1&mute=1&loop=1&playlist=3UZsG7QwHG4",
       title: "Short Video 2"
     },
     {
       id: 3,
-      embedUrl: "https://www.youtube.com/embed/efsOerrZbjo",
+      embedUrl: "https://www.youtube.com/embed/efsOerrZbjo?autoplay=1&mute=1&loop=1&playlist=efsOerrZbjo",
       title: "Short Video 3"
     },
     {
       id: 4,
-      embedUrl: "https://www.youtube.com/embed/EyUy6d2Qih8",
+      embedUrl: "https://www.youtube.com/embed/EyUy6d2Qih8?autoplay=1&mute=1&loop=1&playlist=EyUy6d2Qih8",
       title: "Short Video 4"
     },
     {
       id: 5,
-      embedUrl: "https://www.youtube.com/embed/-QTgRj_nf5s",
+      embedUrl: "https://www.youtube.com/embed/-QTgRj_nf5s?autoplay=1&mute=1&loop=1&playlist=-QTgRj_nf5s",
       title: "Short Video 5"
     },
     {
       id: 6,
-      embedUrl: "https://www.youtube.com/embed/A7XYiASNxnY",
+      embedUrl: "https://www.youtube.com/embed/A7XYiASNxnY?autoplay=1&mute=1&loop=1&playlist=A7XYiASNxnY",
       title: "Short Video 6"
     }
   ];
