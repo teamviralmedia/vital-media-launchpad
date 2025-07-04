@@ -32,13 +32,12 @@ const Hero = () => {
           {/* Main heading */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-none tracking-tight">
-              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">Team viral Media
-            </span>
-              <span className="block relative font-extrabold text-4xl">
+              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">BUILD YOUR </span>
+              <span className="block relative font-extrabold text-7xl">
                 PERSONAL
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-green-400 rounded-full transform scale-x-0 animate-[scale-x_1.5s_ease-out_0.5s_forwards] origin-left"></div>
               </span>
-              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">BUILD YOUR PERSONAL BRAND</span>
+              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">BRAND</span>
             </h1>
           </div>
           
