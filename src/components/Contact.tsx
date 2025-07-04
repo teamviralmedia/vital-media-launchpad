@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 bg-gray-900 text-white">
+  return <section id="contact" className="py-20 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -40,7 +37,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+91 9863857150</p>
                   </div>
                 </div>
                 
@@ -50,7 +47,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">WhatsApp</p>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
+                    <p className="text-gray-300">+91 9863857150</p>
                   </div>
                 </div>
               </div>
@@ -79,36 +76,21 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-6 text-green-400">Send us a message</h3>
             <form className="space-y-6">
               <div>
-                <Input 
-                  placeholder="Your Name" 
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                />
+                <Input placeholder="Your Name" className="bg-gray-700 border-gray-600 text-white placeholder-gray-400" />
               </div>
               <div>
-                <Input 
-                  type="email" 
-                  placeholder="Your Email" 
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                />
+                <Input type="email" placeholder="Your Email" className="bg-gray-700 border-gray-600 text-white placeholder-gray-400" />
               </div>
               <div>
-                <Textarea 
-                  placeholder="Tell us about your project..." 
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 h-32"
-                />
+                <Textarea placeholder="Tell us about your project..." className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 h-32" />
               </div>
-              <Button 
-                type="submit" 
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full transition-all duration-300 hover:scale-105"
-              >
+              <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full transition-all duration-300 hover:scale-105">
                 Send Message
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
