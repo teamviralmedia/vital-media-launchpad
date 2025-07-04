@@ -1,8 +1,81 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
 const Contact = () => {
-  return <section id="contact" className="py-20 bg-gray-900 text-white">
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate form submission (replace with actual API call)
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. We'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -74,23 +147,51 @@ const Contact = () => {
           
           <div className="bg-gray-800 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-6 text-green-400">Send us a message</h3>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Input placeholder="Your Name" className="bg-gray-700 border-gray-600 text-white placeholder-gray-400" />
+                <Input 
+                  name="name"
+                  placeholder="Your Name" 
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400" 
+                  required
+                />
               </div>
               <div>
-                <Input type="email" placeholder="Your Email" className="bg-gray-700 border-gray-600 text-white placeholder-gray-400" />
+                <Input 
+                  type="email" 
+                  name="email"
+                  placeholder="Your Email" 
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400" 
+                  required
+                />
               </div>
               <div>
-                <Textarea placeholder="Tell us about your project..." className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 h-32" />
+                <Textarea 
+                  name="message"
+                  placeholder="Tell us about your project..." 
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 h-32" 
+                  required
+                />
               </div>
-              <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full transition-all duration-300 hover:scale-105">
-                Send Message
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
