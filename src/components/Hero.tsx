@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50/30 flex items-center justify-center px-4 relative overflow-hidden">
+  return <section className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50/30 flex items-center justify-center px-4 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-100/30 rounded-full blur-3xl"></div>
@@ -35,16 +32,13 @@ const Hero = () => {
           {/* Main heading */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-none tracking-tight">
-              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                BUILD YOUR
-              </span>
-              <span className="block relative">
+              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">Team viral Media
+            </span>
+              <span className="block relative font-extrabold text-4xl">
                 PERSONAL
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-green-400 rounded-full transform scale-x-0 animate-[scale-x_1.5s_ease-out_0.5s_forwards] origin-left"></div>
               </span>
-              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                BRAND
-              </span>
+              <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">BUILD YOUR PERSONAL BRAND</span>
             </h1>
           </div>
           
@@ -73,18 +67,11 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white px-8 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl font-semibold group"
-            >
+            <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white px-8 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl font-semibold group">
               Work With Us
               <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
             </Button>
-            <Button 
-              variant="outline"
-              size="lg" 
-              className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105 font-semibold"
-            >
+            <Button variant="outline" size="lg" className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105 font-semibold">
               View Portfolio
             </Button>
           </div>
@@ -100,11 +87,7 @@ const Hero = () => {
               <div className="absolute bottom-8 left-8 w-12 h-12 bg-green-300/20 rounded-full"></div>
               
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
-                <img 
-                  src="/lovable-uploads/b4b9e609-4461-4a8e-98f6-a8fb2e070494.png" 
-                  alt="TeamVitalMedia Profile" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/b4b9e609-4461-4a8e-98f6-a8fb2e070494.png" alt="TeamVitalMedia Profile" className="w-full h-full object-cover" />
               </div>
             </div>
             
@@ -126,8 +109,6 @@ const Hero = () => {
           <ArrowDown className="h-5 w-5" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
