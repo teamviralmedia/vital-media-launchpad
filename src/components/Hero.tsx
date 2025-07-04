@@ -13,6 +13,19 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
         <div className="text-center lg:text-left space-y-8 animate-fade-in">
+          {/* Professional Company Logo & Name */}
+          <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
+            <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-500 rounded-full flex items-center justify-center shadow-lg">
+              <span className="text-white font-bold text-xl">TVM</span>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 tracking-wide">
+                TEAM<span className="text-green-600">VITAL</span>MEDIA
+              </h2>
+              <p className="text-sm text-gray-500 font-medium tracking-wider">CONTENT CREATION STUDIO</p>
+            </div>
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
@@ -21,16 +34,16 @@ const Hero = () => {
           
           {/* Main heading */}
           <div className="space-y-4">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-none tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-none tracking-tight">
               <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                TEAM
+                BUILD YOUR
               </span>
               <span className="block relative">
-                VITAL
+                PERSONAL
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-green-400 rounded-full transform scale-x-0 animate-[scale-x_1.5s_ease-out_0.5s_forwards] origin-left"></div>
               </span>
               <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                MEDIA
+                BRAND
               </span>
             </h1>
           </div>
@@ -80,17 +93,19 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="flex justify-center lg:justify-end animate-fade-in">
           <div className="relative">
-            {/* Main image container */}
-            <div className="w-96 h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-green-100 to-green-50 rounded-3xl flex items-center justify-center border border-green-200/50 shadow-2xl backdrop-blur-sm relative overflow-hidden">
+            {/* Main image container with circular treatment */}
+            <div className="w-96 h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-green-100 to-green-50 rounded-full flex items-center justify-center border-4 border-green-200/50 shadow-2xl backdrop-blur-sm relative overflow-hidden">
               {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-16 h-16 bg-green-200/30 rounded-full"></div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-green-300/20 rounded-full"></div>
+              <div className="absolute top-8 right-8 w-16 h-16 bg-green-200/30 rounded-full"></div>
+              <div className="absolute bottom-8 left-8 w-12 h-12 bg-green-300/20 rounded-full"></div>
               
-              <img 
-                src="/lovable-uploads/b4b9e609-4461-4a8e-98f6-a8fb2e070494.png" 
-                alt="TeamVitalMedia Profile" 
-                className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl object-cover shadow-lg hover:scale-105 transition-transform duration-500"
-              />
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
+                <img 
+                  src="/lovable-uploads/b4b9e609-4461-4a8e-98f6-a8fb2e070494.png" 
+                  alt="TeamVitalMedia Profile" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             
             {/* Floating elements */}
