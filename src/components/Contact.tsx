@@ -1,9 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -142,18 +144,30 @@ const Contact = () => {
             <div>
               <h4 className="text-xl font-bold mb-4 text-green-400">Follow Us</h4>
               <div className="flex space-x-4">
-                <div className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors">
-                  <span className="text-white font-bold">IG</span>
-                </div>
-                <div className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors">
-                  <span className="text-white font-bold">LI</span>
-                </div>
-                <div className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors">
-                  <span className="text-white font-bold">YT</span>
-                </div>
-                <div className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors">
-                  <span className="text-white font-bold">TT</span>
-                </div>
+                <a 
+                  href="https://www.instagram.com/teamviralmedia?igsh=ZjlpZDF4enMydWI0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors"
+                >
+                  <Instagram className="h-5 w-5 text-white" />
+                </a>
+                <a 
+                  href="https://x.com/teamviralm?t=1FqES0kAcLWP71d2pKsIBA&s=09" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors"
+                >
+                  <Twitter className="h-5 w-5 text-white" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/team-viral-media-b0254a36a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center cursor-pointer transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-white" />
+                </a>
               </div>
             </div>
           </div>
