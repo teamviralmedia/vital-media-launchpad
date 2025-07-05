@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -49,8 +49,20 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_0qbx758', // Service ID
+        'template_kjlfy98', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'TeamVitalMedia',
+        },
+        'LK1I6dNw5bnuf5gNJ' // Public Key
+      );
+
+      console.log('EmailJS result:', result);
       
       toast({
         title: "Message Sent!",
@@ -64,6 +76,7 @@ const Contact = () => {
         message: ''
       });
     } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
