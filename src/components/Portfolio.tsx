@@ -33,6 +33,24 @@ const Portfolio = () => {
     }
   ];
 
+  const adsVideos = [
+    {
+      id: 1,
+      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA",
+      title: "Advertisement 1"
+    },
+    {
+      id: 2,
+      embedUrl: "https://www.youtube.com/embed/8znotYgkEJk",
+      title: "Advertisement 2"
+    },
+    {
+      id: 3,
+      embedUrl: "https://www.youtube.com/embed/-1haEosrlwQ",
+      title: "Advertisement 3"
+    }
+  ];
+
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -47,7 +65,48 @@ const Portfolio = () => {
           </p>
         </div>
         
-        {/* Video Grid */}
+        {/* ADS Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              ADS
+            </h3>
+            <div className="w-16 h-1 bg-green-600 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-xl mx-auto">
+              Our advertisement campaigns that drive conversions and brand awareness
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {adsVideos.map((video) => (
+              <div key={video.id} className="group">
+                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  {/* Video Container with 9:16 aspect ratio */}
+                  <div className="relative w-full" style={{ aspectRatio: '9/16' }}>
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      className="absolute inset-0 w-full h-full rounded-xl"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  
+                  {/* Video Info */}
+                  <div className="mt-4 text-center">
+                    <h4 className="text-sm font-semibold text-gray-800 group-hover:text-red-600 transition-colors">
+                      {video.title}
+                    </h4>
+                    <p className="text-xs text-gray-500 mt-1">Advertisement Campaign</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Original Video Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((video) => (
             <div key={video.id} className="group">
