@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -53,7 +52,7 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex flex-wrap gap-8 justify-center lg:justify-start py-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">500+</div>
+              <div className="text-3xl font-bold text-green-600">1500+</div>
               <div className="text-sm text-gray-500 font-medium">Videos Created</div>
             </div>
             <div className="text-center">

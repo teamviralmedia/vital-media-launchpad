@@ -1,4 +1,3 @@
-
 const Portfolio = () => {
   const videos = [
     {
@@ -36,17 +35,17 @@ const Portfolio = () => {
   const adsVideos = [
     {
       id: 1,
-      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA",
+      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&showinfo=0",
       title: "Advertisement 1"
     },
     {
       id: 2,
-      embedUrl: "https://www.youtube.com/embed/8znotYgkEJk",
+      embedUrl: "https://www.youtube.com/embed/8znotYgkEJk?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&showinfo=0",
       title: "Advertisement 2"
     },
     {
       id: 3,
-      embedUrl: "https://www.youtube.com/embed/-1haEosrlwQ",
+      embedUrl: "https://www.youtube.com/embed/-1haEosrlwQ?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&showinfo=0",
       title: "Advertisement 3"
     }
   ];
@@ -63,6 +62,35 @@ const Portfolio = () => {
             See how we've helped brands grow their audience and conversions through 
             compelling short-form content that drives real results.
           </p>
+        </div>
+        
+        {/* Original Video Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {videos.map((video) => (
+            <div key={video.id} className="group">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                {/* Video Container with 9:16 aspect ratio */}
+                <div className="relative w-full" style={{ aspectRatio: '9/16' }}>
+                  <iframe
+                    src={video.embedUrl}
+                    title={video.title}
+                    className="absolute inset-0 w-full h-full rounded-xl"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                
+                {/* Video Info */}
+                <div className="mt-4 text-center">
+                  <h3 className="text-sm font-semibold text-gray-800 group-hover:text-green-600 transition-colors">
+                    {video.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-1">Short-form Content</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
         
         {/* ADS Section */}
@@ -104,35 +132,6 @@ const Portfolio = () => {
               </div>
             ))}
           </div>
-        </div>
-        
-        {/* Original Video Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {videos.map((video) => (
-            <div key={video.id} className="group">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                {/* Video Container with 9:16 aspect ratio */}
-                <div className="relative w-full" style={{ aspectRatio: '9/16' }}>
-                  <iframe
-                    src={video.embedUrl}
-                    title={video.title}
-                    className="absolute inset-0 w-full h-full rounded-xl"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                
-                {/* Video Info */}
-                <div className="mt-4 text-center">
-                  <h3 className="text-sm font-semibold text-gray-800 group-hover:text-green-600 transition-colors">
-                    {video.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1">Short-form Content</p>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
         
         {/* Call to Action */}
