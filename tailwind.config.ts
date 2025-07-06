@@ -102,6 +102,14 @@ export default {
 					'100%': {
 						transform: 'scaleX(1)'
 					}
+				},
+				'slide-right': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(100%)'
+					}
 				}
 			},
 			animation: {
