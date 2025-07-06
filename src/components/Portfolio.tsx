@@ -1,4 +1,3 @@
-
 const Portfolio = () => {
   const videos = [
     {
@@ -33,7 +32,7 @@ const Portfolio = () => {
     },
     {
       id: 7,
-      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&playlist=I3-6JrN1phA",
+      embedUrl: "https://www.youtube.com/embed/ndla5QiF2Ig?autoplay=1&mute=1&loop=1&playlist=ndla5QiF2Ig",
       title: "Short Video 7"
     },
     {
