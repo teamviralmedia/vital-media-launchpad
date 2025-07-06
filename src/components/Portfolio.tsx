@@ -1,3 +1,4 @@
+
 const Portfolio = () => {
   const videos = [
     {
@@ -29,24 +30,21 @@ const Portfolio = () => {
       id: 6,
       embedUrl: "https://www.youtube.com/embed/A7XYiASNxnY?autoplay=1&mute=1&loop=1&playlist=A7XYiASNxnY",
       title: "Short Video 6"
-    }
-  ];
-
-  const adsVideos = [
-    {
-      id: 1,
-      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&showinfo=0",
-      title: "Advertisement 1"
     },
     {
-      id: 2,
-      embedUrl: "https://www.youtube.com/embed/8znotYgkEJk?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&showinfo=0",
-      title: "Advertisement 2"
+      id: 7,
+      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&playlist=I3-6JrN1phA",
+      title: "Short Video 7"
     },
     {
-      id: 3,
-      embedUrl: "https://www.youtube.com/embed/-1haEosrlwQ?autoplay=1&mute=1&loop=1&modestbranding=1&rel=0&showinfo=0",
-      title: "Advertisement 3"
+      id: 8,
+      embedUrl: "https://www.youtube.com/embed/GXYvDQKRL78?autoplay=1&mute=1&loop=1&playlist=GXYvDQKRL78",
+      title: "Short Video 8"
+    },
+    {
+      id: 9,
+      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&playlist=I3-6JrN1phA",
+      title: "Short Video 9"
     }
   ];
 
@@ -64,7 +62,7 @@ const Portfolio = () => {
           </p>
         </div>
         
-        {/* Original Video Grid */}
+        {/* Video Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {videos.map((video) => (
             <div key={video.id} className="group">
@@ -91,47 +89,6 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        {/* ADS Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              ADS
-            </h3>
-            <div className="w-16 h-1 bg-green-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-xl mx-auto">
-              Our advertisement campaigns that drive conversions and brand awareness
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {adsVideos.map((video) => (
-              <div key={video.id} className="group">
-                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  {/* Video Container with 9:16 aspect ratio */}
-                  <div className="relative w-full" style={{ aspectRatio: '9/16' }}>
-                    <iframe
-                      src={video.embedUrl}
-                      title={video.title}
-                      className="absolute inset-0 w-full h-full rounded-xl"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                  
-                  {/* Video Info */}
-                  <div className="mt-4 text-center">
-                    <h4 className="text-sm font-semibold text-gray-800 group-hover:text-red-600 transition-colors">
-                      {video.title}
-                    </h4>
-                    <p className="text-xs text-gray-500 mt-1">Advertisement Campaign</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
         
         {/* Call to Action */}
