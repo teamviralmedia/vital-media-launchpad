@@ -44,6 +44,21 @@ const Portfolio = () => {
       id: 9,
       embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&playlist=I3-6JrN1phA",
       title: "Short Video 9"
+    },
+    {
+      id: 10,
+      embedUrl: "https://www.youtube.com/embed/I3-6JrN1phA?autoplay=1&mute=1&loop=1&playlist=I3-6JrN1phA",
+      title: "Short Video 10"
+    },
+    {
+      id: 11,
+      embedUrl: "https://www.youtube.com/embed/GXYvDQKRL78?autoplay=1&mute=1&loop=1&playlist=GXYvDQKRL78",
+      title: "Short Video 11"
+    },
+    {
+      id: 12,
+      embedUrl: "https://www.youtube.com/embed/Thq9hlWdcyc?autoplay=1&mute=1&loop=1&playlist=Thq9hlWdcyc",
+      title: "Short Video 12"
     }
   ];
 
