@@ -1,41 +1,43 @@
 const Pricing = () => {
   const packages = [
     {
-      name: "Starter Package",
-      price: "₹25,000",
+      name: "Starter",
+      price: "$500",
       period: "/month",
-      videos: "8 videos/month (2 per week)",
+      videos: "10 Reels/month",
       features: [
-        "Basic editing (cuts, captions, simple transitions)",
-        "1 Thumbnail per video",
-        "Delivery: 48 hours"
+        "10 Reels per month",
+        "2 YouTube videos",
+        "5 thumbnails"
       ],
       popular: false,
       gradient: "from-green-400 to-green-500"
     },
     {
-      name: "Growth Package", 
-      price: "₹50,000",
+      name: "Growth", 
+      price: "$1000",
       period: "/month",
-      videos: "20 videos/month (5 per week)",
+      videos: "20 Reels + 4 YouTube",
       features: [
-        "Advanced editing (motion graphics, SFX, dynamic captions)",
-        "Custom thumbnails",
-        "Priority delivery (24–36 hours)"
+        "20 Reels per month",
+        "4 YouTube videos",
+        "Full scripting",
+        "Publishing included"
       ],
       popular: true,
       gradient: "from-green-500 to-green-600"
     },
     {
-      name: "Authority Package",
-      price: "₹90,000", 
+      name: "Pro",
+      price: "$2000", 
       period: "/month",
-      videos: "30 videos/month (daily content)",
+      videos: "30 Reels + Shorts + Daily Content",
       features: [
-        "High-end editing (storytelling cuts, cinematic effects)",
-        "Custom thumbnails",
-        "Dedicated editor + designer",
-        "Delivery: under 24 hours"
+        "30 Reels per month",
+        "YouTube Shorts",
+        "Daily content creation",
+        "Content repurposing",
+        "Strategy consultation"
       ],
       popular: false,
       gradient: "from-green-600 to-green-700"
