@@ -12,7 +12,7 @@ const About = () => {
         
         <div className="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-lg">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-            We help entrepreneurs build profitable personal brands through short-form content.
+            We help Coaches/Consultants, SaaS & Tech Founders build profitable personal brands through short-form content.
           </p>
           
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
