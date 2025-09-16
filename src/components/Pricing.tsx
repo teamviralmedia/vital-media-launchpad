@@ -1,173 +1,136 @@
-const Pricing = () => {
+import React, { useState } from "react";
+
+// TeamVirlMedia - Short-Form Pricing Component
+// TailwindCSS-based, production-ready single-file React component.
+// Default export: PricingSection
+
+export default function PricingSection() {
+  const [billing, setBilling] = useState("monthly"); // "monthly" or "quarterly"
+
   const packages = [
     {
-      name: "Starter",
-      price: "$500",
-      period: "/month",
-      videos: "10 Reels/month",
-      features: [
-        "10 Reels per month",
-        "2 YouTube videos",
-        "5 thumbnails"
-      ],
-      popular: false,
-      gradient: "from-green-400 to-green-500"
+      id: "starter",
+      title: "Starter Shorts",
+      subtitle: "For solopreneurs & authors",
+      videos: "8 Short-Form Videos / month (up to 60s)",
+      thumbnails: "8 Custom Thumbnails",
+      scripts: "Light Script Polishing",
+      priceMonthly: 400,
+      priceQuarterly: 349,
+      cta: "Start Growing",
+      tag: "Best for beginners",
     },
     {
-      name: "Growth", 
-      price: "$1000",
-      period: "/month",
-      videos: "20 Reels + 4 YouTube",
-      features: [
-        "20 Reels per month",
-        "4 YouTube videos",
-        "Full scripting",
-        "Publishing included"
-      ],
-      popular: true,
-      gradient: "from-green-500 to-green-600"
+      id: "growth",
+      title: "Growth Shorts",
+      subtitle: "Most popular — coaches & ecom",
+      videos: "15 Short-Form Videos / month",
+      thumbnails: "15 Thumbnails",
+      scripts: "Scriptwriting Support (hooks + structure)",
+      report: "Monthly Performance Report",
+      priceMonthly: 800,
+      priceQuarterly: 699,
+      cta: "Scale with Us",
+      tag: "Most popular",
+      featured: true,
     },
     {
-      name: "Pro",
-      price: "$2000", 
-      period: "/month",
-      videos: "30 Reels + Shorts + Daily Content",
-      features: [
-        "30 Reels per month",
-        "YouTube Shorts",
-        "Daily content creation",
-        "Content repurposing",
-        "Strategy consultation"
-      ],
-      popular: false,
-      gradient: "from-green-600 to-green-700"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: "👥",
-      title: "Dedicated Editors & Designer",
-      description: "Your own creative team"
+      id: "domination",
+      title: "Domination Shorts",
+      subtitle: "For brands, SaaS & agencies",
+      videos: "30 Short-Form Videos / month",
+      thumbnails: "30 Thumbnails",
+      scripts: "Full Scriptwriting (hooks + storytelling)",
+      analytics: "Advanced Analytics & 2x Strategy Calls",
+      ads: "Custom Ad Creatives (UGC + promos)",
+      priceMonthly: 1500,
+      priceQuarterly: 1299,
+      cta: "Dominate Your Niche",
+      tag: "High-volume",
     },
-    {
-      icon: "⚡",
-      title: "High Quality & Fast Delivery", 
-      description: "Premium content on time"
-    },
-    {
-      icon: "📈",
-      title: "Scalable Packages as You Grow",
-      description: "Upgrade as your needs evolve"
-    }
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-green-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            TeamViralMedia – Packages
-          </h2>
-          <div className="w-20 h-1 bg-green-600 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the perfect package to scale your content and grow your audience
-          </p>
-        </div>
+    <section className="max-w-6xl mx-auto px-6 py-12">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl sm:text-4xl font-bold">TeamVirlMedia — Short-Form Pricing</h2>
+        <p className="mt-2 text-gray-600">Premium short-form video production — edit + thumbnails + scripts. You upload, we deliver.</p>
+      </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {packages.map((pkg, index) => (
-            <div 
-              key={index}
-              className={`relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
-                pkg.popular ? 'ring-4 ring-green-500 ring-opacity-50 scale-105' : ''
-              }`}
-            >
-              {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    Most Popular
-                  </div>
-                </div>
+      <div className="flex items-center justify-center gap-3 mb-8">
+        <span className="text-sm text-gray-600">Billing:</span>
+        <div className="bg-gray-100 rounded-full p-1 inline-flex">
+          <button
+            onClick={() => setBilling("monthly")}
+            className={`px-4 py-1 rounded-full text-sm font-medium ${billing === "monthly" ? "bg-white shadow" : "text-gray-600"}`}
+          >
+            Monthly
+          </button>
+          <button
+            onClick={() => setBilling("quarterly")}
+            className={`px-4 py-1 rounded-full text-sm font-medium ${billing === "quarterly" ? "bg-white shadow" : "text-gray-600"}`}
+          >
+            Quarterly (Save)
+          </button>
+        </div>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-3">
+        {packages.map((pkg) => {
+          const price = billing === "monthly" ? pkg.priceMonthly : pkg.priceQuarterly;
+          const badge = billing === "monthly" ? `$${pkg.priceMonthly}/mo` : `$${pkg.priceQuarterly}/mo`;
+
+          return (
+            <article key={pkg.id} className={`relative rounded-2xl border p-6 shadow-sm bg-white ${pkg.featured ? "ring-2 ring-indigo-400" : ""}`}>
+              {pkg.featured && (
+                <div className="absolute -top-3 left-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">Recommended</div>
               )}
-              
-              <div className="p-8">
-                {/* Package Header */}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{pkg.name}</h3>
-                  <div className={`w-16 h-16 bg-gradient-to-br ${pkg.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                    <div className="text-2xl text-white">🎬</div>
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">{pkg.price}</span>
-                    <span className="text-gray-500 text-lg">{pkg.period}</span>
-                  </div>
-                  <div className="text-green-600 font-semibold text-lg mb-6">
-                    {pkg.videos}
-                  </div>
-                </div>
 
-                {/* Features */}
-                <div className="space-y-4 mb-8">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                      </div>
-                      <span className="text-gray-600 leading-relaxed">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+              <header className="mb-4">
+                <h3 className="text-xl font-semibold">{pkg.title}</h3>
+                <p className="text-sm text-gray-500">{pkg.subtitle}</p>
+              </header>
 
-                {/* CTA Button */}
-                <button className={`w-full bg-gradient-to-r ${pkg.gradient} hover:shadow-xl text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300 hover:scale-105 transform`}>
-                  Get Started
+              <div className="mb-4">
+                <div className="text-3xl font-bold">{`$${price}`}</div>
+                <div className="text-sm text-gray-500">{billing === "monthly" ? "per month" : "per month (billed quarterly)"}</div>
+                <div className="mt-2 inline-flex items-center gap-2 text-xs text-gray-600">
+                  <span className="font-medium px-2 py-1 bg-gray-100 rounded">{pkg.tag}</span>
+                  <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">{billing === "quarterly" ? "Discount Applied" : ""}</span>
+                </div>
+              </div>
+
+              <ul className="mb-6 space-y-2 text-sm text-gray-700">
+                <li>• {pkg.videos}</li>
+                <li>• {pkg.thumbnails}</li>
+                <li>• {pkg.scripts}</li>
+                {pkg.report && <li>• {pkg.report}</li>}
+                {pkg.analytics && <li>• {pkg.analytics}</li>}
+                {pkg.ads && <li>• {pkg.ads}</li>}
+              </ul>
+
+              <footer>
+                <button
+                  className="w-full py-2 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
+                  onClick={() => {
+                    // Replace with actual CTA logic (open modal / contact form / calendar)
+                    window?.open(`mailto:hello@teamvirlmedia.com?subject=Enquiry%20about%20${encodeURIComponent(pkg.title)}`);
+                  }}
+                >
+                  {pkg.cta}
                 </button>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Why Choose Us */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose TeamViralMedia?
-            </h3>
-            <div className="w-16 h-1 bg-green-600 mx-auto"></div>
-          </div>
+                <div className="mt-3 text-xs text-gray-500">Need custom volume or agency pricing? <span className="text-indigo-600 font-medium">Contact us</span></div>
+              </footer>
+            </article>
+          );
+        })}
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">{benefit.icon}</span>
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h4>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Final CTA */}
-          <div className="text-center">
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 max-w-2xl mx-auto">
-              <h4 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Let's make your content go viral 🚀
-              </h4>
-              <p className="text-gray-700 mb-6">
-                Ready to transform your content strategy and reach millions?
-              </p>
-              <button className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg">
-                Start Your Journey
-              </button>
-            </div>
-          </div>
-        </div>
+      <div className="mt-8 text-center text-sm text-gray-600">
+        <p><strong>Add-ons:</strong> Podcast Clip Editing (+$300/mo), Ads Creative Pack (5 UGC ads, +$500), Branding Kit (+$250).</p>
+        <p className="mt-2">All plans include 2 rounds of revisions per video. Delivery times vary by package — standard turnaround 3–7 business days.</p>
       </div>
     </section>
   );
-};
-
-export default Pricing;
+}
