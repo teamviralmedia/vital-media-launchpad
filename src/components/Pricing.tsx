@@ -127,10 +127,6 @@ export default function PricingSection() {
         })}
       </div>
 
-      <div className="mt-8 text-center text-sm text-gray-600">
-        <p><strong>Add-ons:</strong> Podcast Clip Editing (+$300/mo), Ads Creative Pack (5 UGC ads, +$500), Branding Kit (+$250).</p>
-        <p className="mt-2">All plans include 2 rounds of revisions per video. Delivery times vary by package — standard turnaround 3–7 business days.</p>
-      </div>
     </section>
   );
 }
