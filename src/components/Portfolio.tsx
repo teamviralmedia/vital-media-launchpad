@@ -32,7 +32,7 @@ const Portfolio = () => {
     },
     {
       id: 7,
-      embedUrl: "https://www.youtube.com/embed/ndla5QiF2Ig?autoplay=1&mute=1&loop=1&playlist=ndla5QiF2Ig",
+      embedUrl: "https://www.youtube.com/embed/PMIDA_hfbWU?autoplay=1&mute=1&loop=1&playlist=PMIDA_hfbWU",
       title: "Short Video 7"
     },
     {
