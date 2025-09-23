@@ -53,7 +53,7 @@ export default function PricingSection() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-12">
       <div className="text-center mb-8">
-        <h2 className="text-3xl sm:text-4xl font-bold">TeamVirlMedia — Short-Form Pricing</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold">TeamViralMedia — Packages</h2>
         <p className="mt-2 text-gray-600">Premium short-form video production — edit + thumbnails + scripts. You upload, we deliver.</p>
       </div>
 
