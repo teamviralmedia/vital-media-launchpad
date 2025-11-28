@@ -52,11 +52,11 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex flex-wrap gap-8 justify-center lg:justify-start py-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">1500+</div>
+              <div className="text-3xl font-bold text-green-600">3000+</div>
               <div className="text-sm text-gray-500 font-medium">Videos Created</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">50M+</div>
+              <div className="text-3xl font-bold text-green-600">180M+</div>
               <div className="text-sm text-gray-500 font-medium">Total Views</div>
             </div>
             <div className="text-center">
