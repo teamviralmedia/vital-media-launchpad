@@ -18,7 +18,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="font-bold text-xl text-gray-900">
-            <span className="text-green-600">Team</span>VitalMedia
+            <span className="text-green-600">Team</span>ViralMedia
           </div>
           
           <div className="hidden md:flex space-x-8">

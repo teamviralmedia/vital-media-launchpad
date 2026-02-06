@@ -17,8 +17,8 @@ const Hero = () => {
               <span className="text-white font-bold text-xl">TVM</span>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 tracking-wide">
-                TEAM<span className="text-green-600">VITAL</span>MEDIA
+            <h2 className="text-2xl font-bold text-gray-900 tracking-wide">
+                TEAM<span className="text-green-600">VIRAL</span>MEDIA
               </h2>
               <p className="text-sm text-gray-500 font-medium tracking-wider">CONTENT CREATION STUDIO</p>
             </div>
