@@ -110,6 +110,14 @@ export default {
 					'100%': {
 						transform: 'translateX(100%)'
 					}
+				},
+				'marquee-left': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'marquee-right': {
+					'0%': { transform: 'translateX(-50%)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
