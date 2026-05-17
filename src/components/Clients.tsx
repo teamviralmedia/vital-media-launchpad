@@ -33,16 +33,18 @@ const row1 = [...clients, ...clients];
 const row2 = [...clients.slice().reverse(), ...clients.slice().reverse()];
 
 const Card = ({ c }: { c: Client }) => (
-  <div className="relative w-[280px] h-[200px] shrink-0 rounded-2xl overflow-hidden group shadow-xl">
-    <img src={c.img} alt={c.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-    <div className="absolute bottom-0 left-0 right-0 p-4">
-      <div className="flex items-center justify-between mb-1">
-        <h4 className="text-white font-bold text-lg leading-tight">{c.name}</h4>
-        <span className="text-green-400 text-xs font-bold bg-green-500/10 px-2 py-0.5 rounded-full border border-green-500/30">{c.followers}</span>
-      </div>
-      <p className="text-green-200/90 text-xs font-medium">{c.role}</p>
+  <div className="w-[260px] shrink-0 flex flex-col items-center text-center px-6 py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-400/40 transition-all duration-300">
+    <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-green-400/60 ring-offset-4 ring-offset-transparent mb-4">
+      <img
+        src={c.img}
+        alt={c.name}
+        className="h-full w-auto max-w-none object-cover"
+        style={{ objectPosition: "left center", transform: "scale(2.2)", transformOrigin: "16% center" }}
+      />
     </div>
+    <h4 className="text-white font-bold text-base leading-tight">{c.name}</h4>
+    <p className="text-green-300 text-xs font-semibold mt-1">{c.followers} followers</p>
+    <p className="text-gray-400 text-xs mt-2 leading-snug">{c.role}</p>
   </div>
 );
 
