@@ -7,6 +7,14 @@ import asheesh from "@/assets/clients/dp/asheesh.png";
 import kunal from "@/assets/clients/dp/kunal.png";
 import urvashi from "@/assets/clients/dp/urvashi.png";
 import manish from "@/assets/clients/dp/manish.png";
+import segmind from "@/assets/clients/dp/segmind.png";
+import curlmantra from "@/assets/clients/dp/curlmantra.png";
+import dangar from "@/assets/clients/dp/dangar.png";
+import karan from "@/assets/clients/dp/karan.png";
+import veeraj from "@/assets/clients/dp/veeraj.png";
+import fundsindia from "@/assets/clients/dp/fundsindia.png";
+import arkam from "@/assets/clients/dp/arkam.png";
+import athenese from "@/assets/clients/dp/athenese.png";
 
 type Client = {
   img: string;
@@ -17,8 +25,10 @@ type Client = {
 };
 
 const clients: Client[] = [
+  { img: veeraj, name: "Veeraj Gadda", handle: "@vee_daily19", role: "Digital Creator · Fitness", followers: "1M" },
   { img: kyra, name: "Kyra", handle: "@kyraonig", role: "India's First AI Influencer · Shark Tank India", followers: "235K" },
   { img: manish, name: "Manish Singh", handle: "@manishceo", role: "Founder, ZZED Group · Forbes Featured", followers: "259K" },
+  { img: karan, name: "Karan Sarin", handle: "@sweetreactions", role: "Author · Metabolic Health Coach", followers: "259K" },
   { img: kunal, name: "Kunal Chhibber", handle: "@slowbutmoving", role: "Nutritionist · Online Coach", followers: "191K" },
   { img: mhb, name: "MHB Academy", handle: "@mhbacademy", role: "Nutrition & Fitness Education", followers: "185K" },
   { img: khushi, name: "Khushi Chhabra", handle: "@nutritionwith_khushi", role: "Holistic Health Nutritionist", followers: "149K" },
@@ -26,6 +36,12 @@ const clients: Client[] = [
   { img: urvashi, name: "Urvashi Agarwal", handle: "@bano.nutrismart", role: "Fitness Coach & Nutritionist", followers: "73.1K" },
   { img: anona, name: "Anona Agarwal", handle: "@levelupwithanona", role: "Creator · Media Pro", followers: "72K" },
   { img: asheesh, name: "Asheesh Grewal", handle: "@asheesh.mhb", role: "Founder & CEO · MHB Academy", followers: "33.5K" },
+  { img: dangar, name: "Dr Devendra Dangar", handle: "@drdevendradangar", role: "Paediatrician · Parenting Expert", followers: "35.5K" },
+  { img: fundsindia, name: "FundsIndia", handle: "@fundsindia", role: "India's 1st Online Investment Platform", followers: "17.6K" },
+  { img: curlmantra, name: "CurlMantra", handle: "@curlmantra", role: "Hair Care · Made for Indian Curls", followers: "6.8K" },
+  { img: segmind, name: "Segmind AI", handle: "@segmind.ai", role: "Generative AI Workflows", followers: "4.6K" },
+  { img: athenese, name: "Athenese-Dx", handle: "@athenesedx", role: "Medical Diagnostics · Research", followers: "2.7K" },
+  { img: arkam, name: "Arkam Ventures", handle: "@arkamventures", role: "VC · Early Stage Fund", followers: "2.3K" },
 ];
 
 // Duplicate for seamless marquee
