@@ -1,12 +1,12 @@
-import khushi from "@/assets/clients/khushi.png";
-import himanshu from "@/assets/clients/himanshu.png";
-import kyra from "@/assets/clients/kyra.png";
-import anona from "@/assets/clients/anona.png";
-import mhb from "@/assets/clients/mhb.png";
-import asheesh from "@/assets/clients/asheesh.png";
-import kunal from "@/assets/clients/kunal.png";
-import urvashi from "@/assets/clients/urvashi.png";
-import manish from "@/assets/clients/manish.png";
+import khushi from "@/assets/clients/dp/khushi.png";
+import himanshu from "@/assets/clients/dp/himanshu.png";
+import kyra from "@/assets/clients/dp/kyra.png";
+import anona from "@/assets/clients/dp/anona.png";
+import mhb from "@/assets/clients/dp/mhb.png";
+import asheesh from "@/assets/clients/dp/asheesh.png";
+import kunal from "@/assets/clients/dp/kunal.png";
+import urvashi from "@/assets/clients/dp/urvashi.png";
+import manish from "@/assets/clients/dp/manish.png";
 
 type Client = {
   img: string;
@@ -35,12 +35,7 @@ const row2 = [...clients.slice().reverse(), ...clients.slice().reverse()];
 const Card = ({ c }: { c: Client }) => (
   <div className="w-[260px] shrink-0 flex flex-col items-center text-center px-6 py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-400/40 transition-all duration-300">
     <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-green-400/60 ring-offset-4 ring-offset-transparent mb-4">
-      <img
-        src={c.img}
-        alt={c.name}
-        className="h-full w-auto max-w-none object-cover"
-        style={{ objectPosition: "left center", transform: "scale(2.2)", transformOrigin: "16% center" }}
-      />
+      <img src={c.img} alt={c.name} className="w-full h-full object-cover" />
     </div>
     <h4 className="text-white font-bold text-base leading-tight">{c.name}</h4>
     <p className="text-green-300 text-xs font-semibold mt-1">{c.followers} followers</p>
