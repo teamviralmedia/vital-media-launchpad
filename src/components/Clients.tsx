@@ -15,6 +15,12 @@ import veeraj from "@/assets/clients/dp/veeraj.png";
 import fundsindia from "@/assets/clients/dp/fundsindia.png";
 import arkam from "@/assets/clients/dp/arkam.png";
 import athenese from "@/assets/clients/dp/athenese.png";
+import dostcast from "@/assets/clients/dp/dostcast.png";
+import anandrathi from "@/assets/clients/dp/anandrathi.png";
+import motilal from "@/assets/clients/dp/motilal.png";
+import inc42 from "@/assets/clients/dp/inc42.png";
+import snehil from "@/assets/clients/dp/snehil.png";
+import arpit from "@/assets/clients/dp/arpit.png";
 
 type Client = {
   img: string;
@@ -25,6 +31,12 @@ type Client = {
 };
 
 const clients: Client[] = [
+  { img: dostcast, name: "Dostcast", handle: "@dostcast", role: "Podcast · Hosted by Vinamre Kasanaa", followers: "250K" },
+  { img: motilal, name: "Motilal Oswal Group", handle: "@motilaloswalgroup", role: "Wealth Management · 39 Yrs of Trust", followers: "608K" },
+  { img: inc42, name: "Inc42 Media", handle: "@inc42.media", role: "Authority on India's Startup Economy", followers: "196K" },
+  { img: arpit, name: "Dr. Arpit Bansal", handle: "@drarpitbansal", role: "Surgeon · Laparoscopy & Gut Health", followers: "135K" },
+  { img: snehil, name: "Snehil Khanor", handle: "@snehilkhanor", role: "Founder/CEO TrulyMadly · Investor", followers: "51K" },
+  { img: anandrathi, name: "Anand Rathi Wealth", handle: "@anandrathiwealth", role: "Private Wealth for HNI/UHNIs", followers: "11.7K" },
   { img: veeraj, name: "Veeraj Gadda", handle: "@vee_daily19", role: "Digital Creator · Fitness", followers: "1M" },
   { img: kyra, name: "Kyra", handle: "@kyraonig", role: "India's First AI Influencer · Shark Tank India", followers: "235K" },
   { img: manish, name: "Manish Singh", handle: "@manishceo", role: "Founder, ZZED Group · Forbes Featured", followers: "259K" },
@@ -51,7 +63,7 @@ const row2 = [...clients.slice().reverse(), ...clients.slice().reverse()];
 const Card = ({ c }: { c: Client }) => (
   <div className="w-[260px] shrink-0 flex flex-col items-center text-center px-6 py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-400/40 transition-all duration-300">
     <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-green-400/60 ring-offset-4 ring-offset-transparent mb-4">
-      <img src={c.img} alt={c.name} className="w-full h-full object-cover" />
+      <img src={c.img} alt={c.name} className="w-full h-full object-cover scale-110" />
     </div>
     <h4 className="text-white font-bold text-base leading-tight">{c.name}</h4>
     <p className="text-green-300 text-xs font-semibold mt-1">{c.followers} followers</p>
