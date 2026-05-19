@@ -17,8 +17,11 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl text-gray-900">
-            <span className="text-green-600">Team</span>ViralMedia
+          <div className="flex items-center h-16">
+            <div className="bg-gray-900 rounded-lg px-3 py-1.5 flex items-center leading-none">
+              <span className="font-extrabold text-white text-lg tracking-tight">Team</span>
+              <span className="font-extrabold text-green-500 text-lg tracking-tight">ViralMedia</span>
+            </div>
           </div>
           
           <div className="hidden md:flex space-x-8">
