@@ -17,14 +17,10 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center h-16 gap-2">
-            <div className="bg-gray-900 rounded-full w-11 h-11 flex items-center justify-center overflow-hidden flex-shrink-0 border-2 border-gray-800">
-              <span className="font-black text-white text-sm leading-none">T</span>
-              <span className="font-black text-green-500 text-sm leading-none">V</span>
-            </div>
-            <div className="flex items-center leading-none">
-              <span className="font-extrabold text-gray-900 text-xl tracking-tight">Team</span>
-              <span className="font-extrabold text-green-600 text-xl tracking-tight">ViralMedia</span>
+          <div className="flex items-center h-16">
+            <div className="bg-gray-900 rounded-full w-14 h-14 flex flex-col items-center justify-center overflow-hidden flex-shrink-0">
+              <span className="font-black text-white text-[10px] leading-none">Team</span>
+              <span className="font-black text-green-500 text-[9px] leading-none mt-0.5">ViralMedia</span>
             </div>
           </div>
           
