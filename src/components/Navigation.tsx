@@ -18,9 +18,13 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center h-16">
-            <div className="bg-gray-900 rounded-lg px-3 py-1.5 flex items-center leading-none">
-              <span className="font-extrabold text-white text-lg tracking-tight">Team</span>
-              <span className="font-extrabold text-green-500 text-lg tracking-tight">ViralMedia</span>
+            <div className="bg-gray-900 rounded-full w-10 h-10 flex items-center justify-center overflow-hidden flex-shrink-0">
+              <span className="font-extrabold text-white text-[10px] leading-none">T</span>
+              <span className="font-extrabold text-green-500 text-[10px] leading-none">V</span>
+            </div>
+            <div className="ml-2 flex items-center leading-none">
+              <span className="font-extrabold text-gray-900 text-lg tracking-tight">Team</span>
+              <span className="font-extrabold text-green-600 text-lg tracking-tight">ViralMedia</span>
             </div>
           </div>
           
