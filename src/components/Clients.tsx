@@ -62,8 +62,8 @@ const row2 = [...clients.slice().reverse(), ...clients.slice().reverse()];
 
 const Card = ({ c }: { c: Client }) => (
   <div className="w-[260px] shrink-0 flex flex-col items-center text-center px-6 py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-400/40 transition-all duration-300">
-    <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-green-400/60 ring-offset-4 ring-offset-transparent mb-4 bg-white">
-      <img src={c.img} alt={c.name} className="w-full h-full object-cover object-center" />
+    <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-green-400/60 ring-offset-4 ring-offset-transparent mb-4 bg-white p-2">
+      <img src={c.img} alt={c.name} className="w-full h-full object-contain object-center" />
     </div>
     <h4 className="text-white font-bold text-base leading-tight">{c.name}</h4>
     <p className="text-green-300 text-xs font-semibold mt-1">{c.followers} followers</p>
