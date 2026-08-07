@@ -56,7 +56,7 @@ const Hero = () => {
               <div className="text-sm text-gray-500 font-medium">Videos Created</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">180M+</div>
+              <div className="text-3xl font-bold text-green-600">870M+</div>
               <div className="text-sm text-gray-500 font-medium">Total Views</div>
             </div>
             <div className="text-center">
