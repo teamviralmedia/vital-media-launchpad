@@ -89,7 +89,7 @@ const Hero = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
                 <img 
                   src="https://ik.imagekit.io/44occvdby4/1.png?updatedAt=1751681767939" 
-                  alt="TeamVitalMedia Profile" 
+                  alt="TeamViralMedia Profile" 
                   className="w-full h-full object-cover" 
                 />
               </div>
