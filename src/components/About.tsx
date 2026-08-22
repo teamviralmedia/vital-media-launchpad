@@ -1,40 +1,49 @@
-
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            about
+    <section id="about" className="py-32 px-6 bg-background">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <span className="eyebrow text-primary">About TeamViralMedia</span>
+          <h2 className="mt-6 font-display text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
+            Retention is the new <span className="text-primary">Currency.</span>
           </h2>
-          <div className="w-20 h-1 bg-green-600 mx-auto mb-8"></div>
+          <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
+            We help Coaches, Consultants, SaaS and Tech Founders build profitable personal brands
+            through short-form content. In a world of three-second attention spans, we engineer the
+            bridge between your message and the viewer's interest.
+          </p>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+            As college dropouts who cut their teeth inside two marketing agencies, our systems are
+            built on data and real-world reps — not classroom theory.
+          </p>
+
+          <div className="grid grid-cols-2 gap-8 mt-12 border-t border-border pt-10">
+            <div>
+              <div className="font-display text-4xl font-extrabold text-foreground">870M+</div>
+              <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">Total Views</div>
+            </div>
+            <div>
+              <div className="font-display text-4xl font-extrabold text-foreground">3000+</div>
+              <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">Videos Shipped</div>
+            </div>
+          </div>
         </div>
-        
-        <div className="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-lg">
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-            We help Coaches/Consultants, SaaS & Tech Founders build profitable personal brands through short-form content.
-          </p>
-          
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-            As college dropouts, we gained invaluable hands-on experience working with two marketing agencies, 
-            where we developed real-world skills that can't be taught in classrooms.
-          </p>
-          
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Our approach is content-driven, results-focused, and built on a deep understanding of personal 
-            brand growth in today's digital landscape. We turn your expertise into engaging content that 
-            converts followers into customers.
-          </p>
-          
-          <div className="flex flex-wrap gap-4 mt-8">
-            <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
-              Real-World Experience
-            </div>
-            <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
-              Content-Driven Results
-            </div>
-            <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
-              Personal Brand Growth
+
+        <div className="relative">
+          <div className="aspect-square bg-primary rounded-[2rem] rotate-3 absolute inset-0" />
+          <div className="aspect-square bg-ink rounded-[2rem] relative z-10 overflow-hidden">
+            <img
+              src="https://ik.imagekit.io/44occvdby4/1.png?updatedAt=1751681767939"
+              alt="TeamViralMedia founders and content studio"
+              className="w-full h-full object-cover opacity-90"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
+            <div className="absolute bottom-8 left-8">
+              <div className="eyebrow text-primary">Content Creation Studio</div>
+              <div className="font-display text-2xl font-extrabold text-background mt-2">
+                Team<span className="text-primary">ViralMedia</span>
+              </div>
             </div>
           </div>
         </div>
