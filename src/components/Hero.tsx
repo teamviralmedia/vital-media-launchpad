@@ -19,8 +19,8 @@ const Hero = () => {
           Premium Content Agency
         </span>
 
-        <h1 className="max-w-5xl mx-auto font-display text-5xl md:text-8xl lg:text-9xl font-extrabold leading-[0.9] tracking-tighter text-foreground mb-8">
-          DOMINATE THE <span className="text-primary">FEED.</span>
+        <h1 className="max-w-5xl mx-auto font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.02] tracking-tight text-foreground mb-8">
+          Dominate the <span className="text-primary">Feed.</span>
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-12">

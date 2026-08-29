@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				display: ['Syne', 'Inter', 'sans-serif'],
+				display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
