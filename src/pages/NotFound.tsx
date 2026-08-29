@@ -5,10 +5,16 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = "Page Not Found — TeamViralMedia";
+    let meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", "The page you're looking for doesn't exist. Return to TeamViralMedia's short-form content studio.");
     console.error(
       "404 Error: User attempted to access non-existent route:",
       location.pathname
     );
+    return () => {
+      document.title = "TeamViralMedia — Short-Form Content Creation Studio";
+    };
   }, [location.pathname]);
 
   return (
