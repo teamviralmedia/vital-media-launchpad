@@ -59,7 +59,7 @@ const Contact = () => {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_name: 'TeamVitalMedia',
+          to_name: 'TeamViralMedia',
         },
         'LK1I6dNw5bnuf5gNJ' // Public Key
       );
@@ -115,7 +115,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-300">hello@teamvitalmedia.com</p>
+                    <p className="text-gray-300">hello@teamviralmedia.online</p>
                   </div>
                 </div>
                 
