@@ -1,13 +1,13 @@
 const videos = [
-  { id: 1, embedUrl: "https://www.youtube.com/embed/rGJE79C9pPU?autoplay=1&mute=1&loop=1&playlist=rGJE79C9pPU", title: "Short Video 1" },
-  { id: 2, embedUrl: "https://www.youtube.com/embed/3UZsG7QwHG4?autoplay=1&mute=1&loop=1&playlist=3UZsG7QwHG4", title: "Short Video 2" },
-  { id: 3, embedUrl: "https://www.youtube.com/embed/efsOerrZbjo?autoplay=1&mute=1&loop=1&playlist=efsOerrZbjo", title: "Short Video 3" },
-  { id: 4, embedUrl: "https://www.youtube.com/embed/EyUy6d2Qih8?autoplay=1&mute=1&loop=1&playlist=EyUy6d2Qih8", title: "Short Video 4" },
-  { id: 5, embedUrl: "https://www.youtube.com/embed/-QTgRj_nf5s?autoplay=1&mute=1&loop=1&playlist=-QTgRj_nf5s", title: "Short Video 5" },
-  { id: 6, embedUrl: "https://www.youtube.com/embed/A7XYiASNxnY?autoplay=1&mute=1&loop=1&playlist=A7XYiASNxnY", title: "Short Video 6" },
-  { id: 7, embedUrl: "https://www.youtube.com/embed/PMIDA_hfbWU?autoplay=1&mute=1&loop=1&playlist=PMIDA_hfbWU", title: "Short Video 7" },
-  { id: 8, embedUrl: "https://www.youtube.com/embed/GXYvDQKRL78?autoplay=1&mute=1&loop=1&playlist=GXYvDQKRL78", title: "Short Video 8" },
-  { id: 9, embedUrl: "https://www.youtube.com/embed/Thq9hlWdcyc?autoplay=1&mute=1&loop=1&playlist=Thq9hlWdcyc", title: "Short Video 9" },
+  { id: 1, embedUrl: "https://www.youtube.com/embed/rGJE79C9pPU?autoplay=1&mute=1&loop=1&playlist=rGJE79C9pPU", title: "High-Retention Short — Client Reel by TeamViralMedia" },
+  { id: 2, embedUrl: "https://www.youtube.com/embed/3UZsG7QwHG4?autoplay=1&mute=1&loop=1&playlist=3UZsG7QwHG4", title: "Founder Brand Reel — Hook-Led Edit by TeamViralMedia" },
+  { id: 3, embedUrl: "https://www.youtube.com/embed/efsOerrZbjo?autoplay=1&mute=1&loop=1&playlist=efsOerrZbjo", title: "Creator Short — Retention-Based Cut by TeamViralMedia" },
+  { id: 4, embedUrl: "https://www.youtube.com/embed/EyUy6d2Qih8?autoplay=1&mute=1&loop=1&playlist=EyUy6d2Qih8", title: "Personal Brand Reel — Scripted Short by TeamViralMedia" },
+  { id: 5, embedUrl: "https://www.youtube.com/embed/-QTgRj_nf5s?autoplay=1&mute=1&loop=1&playlist=-QTgRj_nf5s", title: "Viral Hook Short — Client Edit by TeamViralMedia" },
+  { id: 6, embedUrl: "https://www.youtube.com/embed/A7XYiASNxnY?autoplay=1&mute=1&loop=1&playlist=A7XYiASNxnY", title: "Coach Content Reel — Short-Form Edit by TeamViralMedia" },
+  { id: 7, embedUrl: "https://www.youtube.com/embed/PMIDA_hfbWU?autoplay=1&mute=1&loop=1&playlist=PMIDA_hfbWU", title: "Brand Story Short — Client Reel by TeamViralMedia" },
+  { id: 8, embedUrl: "https://www.youtube.com/embed/GXYvDQKRL78?autoplay=1&mute=1&loop=1&playlist=GXYvDQKRL78", title: "Engagement-Driven Reel — Short-Form Edit by TeamViralMedia" },
+  { id: 9, embedUrl: "https://www.youtube.com/embed/Thq9hlWdcyc?autoplay=1&mute=1&loop=1&playlist=Thq9hlWdcyc", title: "Founder-Led Short — Client Edit by TeamViralMedia" },
 ];
 
 const Portfolio = () => {
